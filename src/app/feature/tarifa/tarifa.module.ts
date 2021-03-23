@@ -7,13 +7,15 @@ import { TarifaComponent } from "@tarifa/components/tarifa/tarifa.component";
 import { ListarTarifaComponent } from '@tarifa/components/listar-tarifa/listar-tarifa.component';
 import { FormularioTarifaComponent } from "@tarifa/shared/formulario-tarifa/formulario-tarifa.component";
 import { CrearTarifaComponent } from "@tarifa/components/crear-tarifa/crear-tarifa.component";
+import { EditarTarifaComponent } from "@tarifa/components/editar-tarifa/editar-tarifa.component";
 
 @NgModule({
   declarations: [
     CrearTarifaComponent,
     ListarTarifaComponent,
     TarifaComponent,
-    FormularioTarifaComponent
+    FormularioTarifaComponent,
+    EditarTarifaComponent
   ],
   imports: [
     TarifaRoutingModule,

@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { TarifaService } from '@tarifa/shared/service/tarifa.service';
 import { Router } from "@angular/router";
+import { AlertasService } from "@core-service/alertas.service";
+import { Iconos } from '@shared/util/iconos.enum';
+import { ERROR, EXITO } from "@shared/util/constantes";
 
-const LONGITUD_MINIMA_PERMITIDA_TEXTO = 3;
+const LONGITUD_MINIMA_ANIO = 4;
 const TARIFA_CREADA_CORRECTAMENTE = "Tarifa creada correctamente";
 
 @Component({
@@ -14,23 +17,25 @@ const TARIFA_CREADA_CORRECTAMENTE = "Tarifa creada correctamente";
 export class CrearTarifaComponent implements OnInit {
 
   tarifaForm: FormGroup;
-  constructor(protected tarifaService: TarifaService, private router: Router) { }
+  constructor(protected tarifaService: TarifaService, private router: Router, protected alertasService: AlertasService) { }
 
   ngOnInit() {
     this.construirFormularioTarifa();
   }
 
   regresar(): void {
-    this.router.navigate(["tarifa/listar"]);
+    this.router.navigate(["tarifa"]);
   }
 
   guardarTarifa(tarifaFormulario: FormGroup) {
     this.tarifaService.guardar(tarifaFormulario.value).subscribe(
       () => {
-        alert(TARIFA_CREADA_CORRECTAMENTE);
+        this.alertasService.alert(EXITO, TARIFA_CREADA_CORRECTAMENTE, Iconos.SUCCESS)
         this.regresar();
       },
-      (error) => console.log(error)      
+      (error) => {
+        this.alertasService.alert(ERROR, error.error.mensaje, Iconos.ERROR);
+      } 
     );
   }
 
@@ -40,7 +45,7 @@ export class CrearTarifaComponent implements OnInit {
       avaluoMinimo: new FormControl(null, Validators.required),
       avaluoMaximo: new FormControl(null, Validators.required),
       tarifa: new FormControl(null, Validators.required),
-      anio: new FormControl(null, [Validators.required, Validators.minLength(LONGITUD_MINIMA_PERMITIDA_TEXTO)])
+      anio: new FormControl(null, [Validators.required, Validators.minLength(LONGITUD_MINIMA_ANIO)])
     });
   }
 

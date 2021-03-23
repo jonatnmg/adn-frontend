@@ -21,7 +21,7 @@ export class FormularioTarifaComponent implements OnInit {
 
   regresar(): void {
     this.tarifaService.tarifa = null;
-    this.router.navigate(["tarifa/listar"]);
+    this.router.navigate(["tarifa"]);
   }
 
   realizarAccionBotonGuardar() {

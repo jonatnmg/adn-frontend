@@ -1,3 +1,9 @@
-<p>Tarifa</p>
+<nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <button id="linkTarifa" routerLink="./" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }" class="btn btn-sm btn-outline-success ml-4" type="button">Listar Tarifa</button>
+      <button id="linkCrearTarifa" routerLink="./crear" routerLinkActive="active" class="btn btn-sm btn-outline-success ml-4" type="button">Crear Tarifa</button>
+    </form>
+  </nav>
 
 <router-outlet></router-outlet>
