@@ -7,6 +7,7 @@ import { HomeComponent } from '@home/home.component';
 import { ProductoModule } from '@producto/producto.module';
 import { TarifaModule } from "@tarifa/tarifa.module";
 import { PropietarioModule } from "./feature/propietario/propietario.module";
+import { InmuebleModule } from "@inmueble/inmueble.module";
 
 
 import { CoreModule } from '@core/core.module';
@@ -24,7 +25,8 @@ import { CookieService } from 'ngx-cookie-service';
     ProductoModule,
     CoreModule,
     TarifaModule,
-    PropietarioModule
+    PropietarioModule,
+    InmuebleModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],

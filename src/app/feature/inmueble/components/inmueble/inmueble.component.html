@@ -1,0 +1,9 @@
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <button id="linkInmueble" routerLink="./" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }" class="btn btn-sm btn-outline-success ml-4" type="button">Listar Inmueble</button>
+    <button id="linkCrearInmueble" routerLink="./crear" routerLinkActive="active" class="btn btn-sm btn-outline-success ml-4" type="button">Crear Inmueble</button>
+  </form>
+</nav>
+
+<router-outlet></router-outlet>

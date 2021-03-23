@@ -14,6 +14,7 @@ export class AppComponent {
     { url: '/producto', nombre: 'Producto' },
     { url: '/tarifa', nombre: 'Tarifa' } ,  
     { url: '/propietario', nombre: 'Propietario' } ,  
+    { url: '/inmueble', nombre: 'Inmueble' } ,  
   ];
 
   

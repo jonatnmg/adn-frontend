@@ -22,6 +22,9 @@
       ],      
       "@propietario/*": [
         "src/app/feature/propietario/*"
+      ]      ,
+      "@inmueble/*": [
+        "src/app/feature/inmueble/*"
       ],
       "@shared/*": [
         "src/app/shared/*"

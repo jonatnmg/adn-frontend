@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
   { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
   { path: 'tarifa', loadChildren: () => import('@tarifa/tarifa.module').then(mod => mod.TarifaModule) },
-  { path: 'propietario', loadChildren: () => import('./feature/propietario/propietario.module').then(mod => mod.PropietarioModule) }
+  { path: 'propietario', loadChildren: () => import('@propietario/propietario.module').then(mod => mod.PropietarioModule) },
+  { path: 'inmueble', loadChildren: () => import('@inmueble/inmueble.module').then(mod => mod.InmuebleModule) }
   
 ];
 
