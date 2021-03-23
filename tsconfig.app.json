@@ -17,9 +17,13 @@
       "@producto/*": [
         "src/app/feature/producto/*"
       ],
+      "@tarifa/*": [
+        "src/app/feature/tarifa/*"
+      ],
       "@shared/*": [
         "src/app/shared/*"
       ]
+      
     }
   },
   "files": [

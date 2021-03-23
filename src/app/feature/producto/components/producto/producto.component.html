@@ -1,8 +1,11 @@
-<nav>
-  <a id="linkProducto" routerLink="./" routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }">Producto</a>
-  <a id="linkCrearProducto" routerLink="./crear" routerLinkActive="active">Crear producto</a>
-  <a id="linkBorrarProducto" routerLink="./borrar" routerLinkActive="active">Borrar producto</a>
-  <a id="linkListarProducto" routerLink="./listar" routerLinkActive="active">listar producto</a>
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <button id="linkProducto" routerLink="./" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }" class="btn btn-sm btn-outline-success ml-4" type="button">Producto</button>
+    <button id="linkCrearProducto" routerLink="./crear" routerLinkActive="active" class="btn btn-sm btn-outline-success ml-4" type="button">Crear producto</button>
+    <button id="linkBorrarProducto" routerLink="./borrar" routerLinkActive="active" class="btn btn-sm btn-outline-danger ml-4" type="button">Borrar producto</button>
+    <button id="linkListarProducto" routerLink="./listar" routerLinkActive="active" class="btn btn-sm btn-outline-success ml-4" type="button">Listar producto</button>
+  </form>
 </nav>
+
 <router-outlet></router-outlet>

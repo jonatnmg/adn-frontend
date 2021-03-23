@@ -28,7 +28,7 @@ import { Component, OnInit } from '@angular/core';
   }`]
 })
 export class ToolbarComponent implements OnInit {
-
+  title:string = "Pago Impuesto predial"
   constructor() { }
 
   ngOnInit() {
