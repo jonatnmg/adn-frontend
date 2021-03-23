@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListarTarifaComponent } from './components/listar-tarifa/listar-tarifa.component'
 import { TarifaComponent } from './components/tarifa/tarifa.component';
-
+import { CrearTarifaComponent } from "@tarifa/components/crear-tarifa/crear-tarifa.component";
 
 const routes: Routes = [
   {
@@ -10,9 +10,17 @@ const routes: Routes = [
     component: TarifaComponent,
     children: [
       {
+        path: 'crear',
+        component: CrearTarifaComponent
+      },
+      {
         path: 'listar',
         component: ListarTarifaComponent
-      }
+      },
+      {
+        path: 'editar',
+        component: CrearTarifaComponent
+      },
     ]
   }
 ];

@@ -5,12 +5,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from '@home/home.component';
 import { ProductoModule } from '@producto/producto.module';
+import { TarifaModule } from "@tarifa/tarifa.module";
 
 
 import { CoreModule } from '@core/core.module';
 import { CookieService } from 'ngx-cookie-service';
-
-
 
 
 @NgModule({
@@ -22,7 +21,8 @@ import { CookieService } from 'ngx-cookie-service';
     BrowserModule,
     AppRoutingModule,
     ProductoModule,
-    CoreModule
+    CoreModule,
+    TarifaModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],

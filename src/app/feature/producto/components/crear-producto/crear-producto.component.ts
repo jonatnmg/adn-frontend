@@ -19,7 +19,7 @@ export class CrearProductoComponent implements OnInit {
   }
 
   cerar() {
-    this.productoServices.guardar(this.productoForm.value);
+    this.productoServices.guardar(this.productoForm.value)
   }
 
   private construirFormularioProducto() {
