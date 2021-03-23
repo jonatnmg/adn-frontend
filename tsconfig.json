@@ -35,6 +35,9 @@
       ],
       "@tarifa/*": [
         "src/app/feature/tarifa/*"
+      ],            
+      "@propietario/*": [
+        "src/app/feature/propietario/*"
       ],
       "@shared/*": [
         "src/app/shared/*"

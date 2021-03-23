@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from '@home/home.component';
 import { ProductoModule } from '@producto/producto.module';
 import { TarifaModule } from "@tarifa/tarifa.module";
+import { PropietarioModule } from "./feature/propietario/propietario.module";
 
 
 import { CoreModule } from '@core/core.module';
@@ -22,7 +23,8 @@ import { CookieService } from 'ngx-cookie-service';
     AppRoutingModule,
     ProductoModule,
     CoreModule,
-    TarifaModule
+    TarifaModule,
+    PropietarioModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],

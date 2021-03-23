@@ -25,9 +25,7 @@ export class ListarTarifaComponent implements OnInit {
   constructor(protected tarifaService: TarifaService, private router: Router, protected alertasService: AlertasService) { }
 
   ngOnInit() {
-    this.listarTarifas = this.tarifaService.consultar();
-    console.log(this.listarTarifas);
-    
+    this.listarTarifas = this.tarifaService.consultar();    
   }
 
   actualizarTarifa(tarifa: Tarifa) {
