@@ -43,7 +43,8 @@ export class ListarPropietarioComponent implements OnInit {
       {
         clickConfirm: () => {
           this.propietarioService.eliminar(propietario).subscribe(() =>{
-            this.alertasService.alert(EXITO, ELIMINADO_CORRECTAMENTE, Iconos.SUCCESS)
+            this.alertasService.alert(EXITO, ELIMINADO_CORRECTAMENTE, Iconos.SUCCESS);
+            this.regresar();
         }, 
           (error) => {
             this.alertasService.alert(ERROR, error.error.mensaje, Iconos.ERROR);
@@ -52,6 +53,12 @@ export class ListarPropietarioComponent implements OnInit {
         },
       }
     );    
+  }
+
+  regresar(): void {
+    this.listaPropietario = this.propietarioService.consultar();
+    this.propietarioService.propietario = null;
+    this.router.navigate(["/propietario"]);
   }
 
 }

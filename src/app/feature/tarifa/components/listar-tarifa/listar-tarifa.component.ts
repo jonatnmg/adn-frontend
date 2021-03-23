@@ -25,7 +25,7 @@ export class ListarTarifaComponent implements OnInit {
   constructor(protected tarifaService: TarifaService, private router: Router, protected alertasService: AlertasService) { }
 
   ngOnInit() {
-    this.listarTarifas = this.tarifaService.consultar();    
+    this.listarTarifas = this.tarifaService.consultar();
   }
 
   actualizarTarifa(tarifa: Tarifa) {
@@ -44,7 +44,8 @@ export class ListarTarifaComponent implements OnInit {
       {
         clickConfirm: () => {
           this.tarifaService.eliminar(tarifa).subscribe(() =>{
-            this.alertasService.alert(EXITO, ELIMINADO_CORRECTAMENTE, Iconos.SUCCESS)
+            this.alertasService.alert(EXITO, ELIMINADO_CORRECTAMENTE, Iconos.SUCCESS);
+            this.regresar();
         }, 
           (error) => {
             this.alertasService.alert(ERROR, error.error.mensaje, Iconos.ERROR);
@@ -53,6 +54,13 @@ export class ListarTarifaComponent implements OnInit {
         },
       }
     );    
+  }
+
+  regresar(): void {
+    this.listarTarifas = this.tarifaService.consultar();
+    
+    this.tarifaService.tarifa = null;
+    this.router.navigate(["/tarifa"]);
   }
 
 }

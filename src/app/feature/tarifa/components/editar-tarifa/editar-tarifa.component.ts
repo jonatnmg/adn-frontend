@@ -12,8 +12,7 @@ const TARIFA_ACTUALIZADA_CORRECTAMENTE = "Tarifa actualizada correctamente";
 
 @Component({
   selector: 'app-editar-tarifa',
-  templateUrl: './editar-tarifa.component.html',
-  styleUrls: ['./editar-tarifa.component.scss']
+  templateUrl: './editar-tarifa.component.html'
 })
 export class EditarTarifaComponent implements OnInit {
 
