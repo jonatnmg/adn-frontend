@@ -7,6 +7,7 @@ import { ERROR, EXITO } from "@shared/util/constantes";
 import { InmuebleService } from '@inmueble/shared/service/inmueble.service';
 
 const LONGITUD_MINIMA_TEXTO = 3;
+const LONGITUD_MINIMA_NUMERO_IDENTIFICACION = 6;
 const INMUEBLE_CREADO_CORRECTAMENTE = "Inmueble creado correctamente";
 
 @Component({
@@ -30,14 +31,14 @@ export class CrearInmuebleComponent implements OnInit {
   private construirFormularioInmueble() {
     this.inmuebleForm = new FormGroup({
       id: new FormControl(0),
-      numeroPredial: new FormControl(null, [Validators.required, Validators.minLength(LONGITUD_MINIMA_TEXTO)]),
+      numeroPredial: new FormControl(null, [Validators.required, Validators.minLength(LONGITUD_MINIMA_NUMERO_IDENTIFICACION)]),
       direccion: new FormControl(null, [Validators.required, Validators.minLength(LONGITUD_MINIMA_TEXTO)]),
       areaTotal: new FormControl(null, Validators.required),
       areaConstruida: new FormControl(null, Validators.required),
       avaluoCatastral: new FormControl(null, Validators.required),
-      numeroIdentificacionPropietario: new FormControl(2456789, Validators.required),
-      nombrePropietario: new FormControl("Propietario3", Validators.required),
-      idPropietario: new FormControl(3, Validators.required)
+      numeroIdentificacionPropietario: new FormControl(null, Validators.required),
+      nombrePropietario: new FormControl(null, Validators.required),
+      idPropietario: new FormControl(null, Validators.required)
     });
   }
 

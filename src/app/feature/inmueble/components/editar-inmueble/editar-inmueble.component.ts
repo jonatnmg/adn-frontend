@@ -9,6 +9,7 @@ import { Inmueble } from '@inmueble/shared/model/inmueble';
 
 
 const LONGITUD_MINIMA_TEXTO = 3;
+const LONGITUD_MINIMA_NUMERO_IDENTIFICACION = 6;
 const INMUEBLE_MODIFICADO_CORRECTAMENTE = "Inmueble modificado correctamente";
 
 @Component({
@@ -34,9 +35,11 @@ export class EditarInmuebleComponent implements OnInit {
   }
 
   private construirFormularioInmueble() {
+    console.log("Inmueble", this.inmueble);
+    
     this.inmuebleForm = new FormGroup({
       id: new FormControl(this.inmueble?.id),
-      numeroPredial: new FormControl(this.inmueble?.numeroPredial, [Validators.required, Validators.minLength(LONGITUD_MINIMA_TEXTO)]),
+      numeroPredial: new FormControl(this.inmueble?.numeroPredial, [Validators.required, Validators.minLength(LONGITUD_MINIMA_NUMERO_IDENTIFICACION)]),
       direccion: new FormControl(this.inmueble?.direccion, [Validators.required, Validators.minLength(LONGITUD_MINIMA_TEXTO)]),
       areaTotal: new FormControl(this.inmueble?.areaTotal, Validators.required),
       areaConstruida: new FormControl(this.inmueble?.areaConstruida, Validators.required),

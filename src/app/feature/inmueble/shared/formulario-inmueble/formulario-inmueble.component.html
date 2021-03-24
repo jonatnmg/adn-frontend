@@ -12,19 +12,19 @@
 
               <div class="col">
                 <label for="numeroPredial">Número predial:</label>
-                <input validar formControlName="numeroPredial" name="numeroPredial" id="numeroPredial" type="number" class="form-control"
-                  required />
+                <input validar formControlName="numeroPredial" name="numeroPredial" id="numeroPredial" type="number"
+                  class="form-control" required />
               </div>
 
               <div class="col">
                 <label for="avaluoCatastral">Avaluo catastral:</label>
-                <input validar formControlName="avaluoCatastral" name="avaluoCatastral" id="avaluoCatastral" type="number" class="form-control"
-                  required>
+                <input validar formControlName="avaluoCatastral" name="avaluoCatastral" id="avaluoCatastral"
+                  type="number" class="form-control" required>
               </div>
 
             </div>
-            
-            <br>
+
+          
 
             <div class="row">
               <div class="col">
@@ -34,46 +34,48 @@
               </div>
             </div>
 
-            <br>
+           
 
             <div class="row">
-              
+
               <div class="col">
                 <label for="areaTotal">Area total:</label>
-                <input validar formControlName="areaTotal" name="areaTotal" id="areaTotal" type="number" class="form-control"
-                placeholder="Mt2"
-                >
+                <input validar formControlName="areaTotal" name="areaTotal" id="areaTotal" type="number"
+                  class="form-control" placeholder="Mt2">
               </div>
 
               <div class="col">
                 <label for="areaConstruida">Area construida:</label>
-                <input validar formControlName="areaConstruida" name="areaConstruida" id="areaConstruida" type="number" class="form-control"
-                placeholder="Mt2" required>
+                <input validar formControlName="areaConstruida" name="areaConstruida" id="areaConstruida" type="number"
+                  class="form-control" placeholder="Mt2" required>
               </div>
 
             </div>
 
-            <br>
+    
 
-            <div class="row">
-              <div class="col">
-                <label for="numeroIdentificacionPropietario">Número identificación Propietario:</label>
-                <input validar formControlName="numeroIdentificacionPropietario" name="numeroIdentificacionPropietario" id="numeroIdentificacionPropietario" type="text"
-                  class="form-control" required (change)="buscarPropietarioNumeroIdentificacion($event)" >
+            <fieldset>
+              <legend>Información propietario</legend>
+              <div class="row">
+                <div class="col">
+                  <label for="numeroIdentificacionPropietario">Número identificación propietario:</label>
+                  <input validar formControlName="numeroIdentificacionPropietario"
+                    name="numeroIdentificacionPropietario" id="numeroIdentificacionPropietario" type="text"
+                    class="form-control" required (change)="buscarPropietarioNumeroIdentificacion($event)"
+                    placeholder="Escribe para buscar propietario">
+                </div>
+
+                <div class="col">
+                  <label for="nombrePropietario">Nombre propietario:</label>
+                  <input validar formControlName="nombrePropietario" name="nombrePropietario" id="nombrePropietario"
+                    type="text" class="form-control" readonly>
+
+                  <input formControlName="idPropietario" name="idPropietario" id="idPropietario" type="hidden"
+                    class="form-control" readonly>
+                </div>
+
               </div>
-
-              <div class="col">
-                <label for="nombrePropietario">Nombre propietario:</label>
-                <input validar formControlName="nombrePropietario" name="nombrePropietario" id="nombrePropietario" type="text"
-                  class="form-control" readonly>
-
-                  <input validar formControlName="idPropietario" name="idPropietario" id="idPropietario" type="text"
-                  class="form-control" readonly>   
-              </div>
-
-                         
-
-            </div>
+            </fieldset>
 
             <br>
 

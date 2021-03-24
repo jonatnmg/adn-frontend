@@ -9,7 +9,7 @@ import { Tarifa } from "../model/tarifa";
 export class TarifaService {
 
   tarifa: Tarifa;
-  URL_TARIFAS = '/tarifas';
+  private URL_TARIFAS = '/tarifas';
 
   constructor(protected http: HttpService) { }
 
