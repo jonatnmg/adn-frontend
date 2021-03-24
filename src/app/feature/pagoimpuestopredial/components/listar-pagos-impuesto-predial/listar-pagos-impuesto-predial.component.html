@@ -20,7 +20,7 @@
             <td>{{pagos.fecha}}</td>
             <td>{{pagos.anio}}</td>
             <td>{{pagos.propietario.nombre}}</td>
-            <td>{{pagos.inmueble.numeroPredial | number}}</td>
+            <td>{{pagos.inmueble.numeroPredial}}</td>
             <td>{{pagos.valorPagado | currency:"CO":"$":"1.0"}}</td>
             <td>
               <a (click)="actualizarPagoImpuestoPredial(pagos)" class="pointer"> <i class="fa fa-edit"></i> </a>
