@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
   { path: 'tarifa', loadChildren: () => import('@tarifa/tarifa.module').then(mod => mod.TarifaModule) },
   { path: 'propietario', loadChildren: () => import('@propietario/propietario.module').then(mod => mod.PropietarioModule) },
-  { path: 'inmueble', loadChildren: () => import('@inmueble/inmueble.module').then(mod => mod.InmuebleModule) }
+  { path: 'inmueble', loadChildren: () => import('@inmueble/inmueble.module').then(mod => mod.InmuebleModule) },
+  { path: 'pagoimpuestopredial', loadChildren: () => import('@pagoimpuestopredial/pago-impuesto-predial.module').then(mod => mod.PagoImpuestoPredialModule) },
   
 ];
 

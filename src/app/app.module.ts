@@ -8,7 +8,7 @@ import { ProductoModule } from '@producto/producto.module';
 import { TarifaModule } from "@tarifa/tarifa.module";
 import { PropietarioModule } from "./feature/propietario/propietario.module";
 import { InmuebleModule } from "@inmueble/inmueble.module";
-
+import { PagoImpuestoPredialModule } from "@pagoimpuestopredial/pago-impuesto-predial.module";
 
 import { CoreModule } from '@core/core.module';
 import { CookieService } from 'ngx-cookie-service';
@@ -26,7 +26,8 @@ import { CookieService } from 'ngx-cookie-service';
     CoreModule,
     TarifaModule,
     PropietarioModule,
-    InmuebleModule
+    InmuebleModule,
+    PagoImpuestoPredialModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],

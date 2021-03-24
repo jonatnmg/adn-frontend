@@ -15,6 +15,7 @@ export class AppComponent {
     { url: '/tarifa', nombre: 'Tarifa' } ,  
     { url: '/propietario', nombre: 'Propietario' } ,  
     { url: '/inmueble', nombre: 'Inmueble' } ,  
+    { url: '/pagoimpuestopredial', nombre: 'Pagos impuesto predial' } 
   ];
 
   

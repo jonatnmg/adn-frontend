@@ -26,6 +26,9 @@
       "@inmueble/*": [
         "src/app/feature/inmueble/*"
       ],
+      "@pagoimpuestopredial/*": [
+        "src/app/feature/pagoimpuestopredial/*"
+      ],
       "@shared/*": [
         "src/app/shared/*"
       ]      
