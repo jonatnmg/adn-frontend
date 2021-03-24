@@ -52,6 +52,11 @@ export class ListarInmuebleComponent implements OnInit {
     );    
   }
 
+  actualizarInmueble(inmueble: Inmueble) {
+    this.inmuebleService.inmueble = inmueble;
+    this.router.navigate(["/inmueble/editar"]);
+  }
+
   regresar(): void {
     this.listaInmuebles = this.inmuebleService.consultar();
     this.inmuebleService.inmueble = null;

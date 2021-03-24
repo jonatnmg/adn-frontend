@@ -1,3 +1,96 @@
-<p>
-  formulario-inmueble works!
-</p>
+<div class="container-fluid mt-2">
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card">
+
+        <h5 class="card-header">{{titulo}} Inmueble</h5>
+        <div class="card-body">
+          <form [formGroup]="inmuebleForm" (ngSubmit)="realizarAccionBotonGuardar()" #ngForm="ngForm">
+
+            <div class="row">
+
+              <div class="col">
+                <label for="numeroPredial">Número predial:</label>
+                <input validar formControlName="numeroPredial" name="numeroPredial" id="numeroPredial" type="number" class="form-control"
+                  required />
+              </div>
+
+              <div class="col">
+                <label for="avaluoCatastral">Avaluo catastral:</label>
+                <input validar formControlName="avaluoCatastral" name="avaluoCatastral" id="avaluoCatastral" type="number" class="form-control"
+                  required>
+              </div>
+
+            </div>
+            
+            <br>
+
+            <div class="row">
+              <div class="col">
+                <label for="direccion">Dirección:</label>
+                <input validar formControlName="direccion" name="direccion" id="direccion" type="text"
+                  class="form-control" required>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+              
+              <div class="col">
+                <label for="areaTotal">Area total:</label>
+                <input validar formControlName="areaTotal" name="areaTotal" id="areaTotal" type="number" class="form-control"
+                placeholder="Mt2"
+                >
+              </div>
+
+              <div class="col">
+                <label for="areaConstruida">Area construida:</label>
+                <input validar formControlName="areaConstruida" name="areaConstruida" id="areaConstruida" type="number" class="form-control"
+                placeholder="Mt2" required>
+              </div>
+
+            </div>
+
+            <br>
+
+            <div class="row">
+              <div class="col">
+                <label for="numeroIdentificacionPropietario">Número identificación Propietario:</label>
+                <input validar formControlName="numeroIdentificacionPropietario" name="numeroIdentificacionPropietario" id="numeroIdentificacionPropietario" type="text"
+                  class="form-control" required (change)="buscarPropietarioNumeroIdentificacion($event)" >
+              </div>
+
+              <div class="col">
+                <label for="nombrePropietario">Nombre propietario:</label>
+                <input validar formControlName="nombrePropietario" name="nombrePropietario" id="nombrePropietario" type="text"
+                  class="form-control" readonly>
+
+                  <input validar formControlName="idPropietario" name="idPropietario" id="idPropietario" type="text"
+                  class="form-control" readonly>   
+              </div>
+
+                         
+
+            </div>
+
+            <br>
+
+            <div class="mt-2 text-center">
+              <button type="submit" class="btn btn-primary mr-4" id="registrar">
+                <i class="fa fa-save"></i> Guardar
+              </button>
+
+              <button type="button" class="btn btn-secondary" (click)="regresar()">
+                Regresar
+              </button>
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

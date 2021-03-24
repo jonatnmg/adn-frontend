@@ -1,3 +1,5 @@
+import { Propietario } from "@propietario/shared/model/propietario";
+
 export class Inmueble {
     
     id: number;
@@ -7,6 +9,7 @@ export class Inmueble {
     areaConstruida: number;
     avaluoCatastral: number;
     idPropietario: number;
+    propietario: Propietario;
 
     constructor(id: number,  numeroPredial: number,  direccion: string, areaTotal: number, areaConstruida: number, avaluoCatastral: number, idPropietario: number) {
         this.id = id;

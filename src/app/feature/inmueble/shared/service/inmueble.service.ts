@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from '@core/services/http.service';
-import { Propietario } from '@propietario/shared/model/propietario';
 import { environment } from 'src/environments/environment';
 import { Inmueble } from '../model/inmueble';
 
@@ -10,8 +9,7 @@ import { Inmueble } from '../model/inmueble';
 export class InmuebleService {
 
   inmueble: Inmueble
-  URL_INMUEBLE = "/inmuebles";
-  URL_PROPIETARIO = "/propietarios";
+  private URL_INMUEBLE = "/inmuebles";
 
   constructor(protected http: HttpService) { }
 
@@ -32,10 +30,6 @@ export class InmuebleService {
   public eliminar(inmueble: Inmueble) {
     return this.http.doDelete<boolean>(`${environment.endpoint}${this.URL_INMUEBLE}/${inmueble.id}`,
       this.http.optsName('Eliminar Inmuebles'));
-  }
-
-  public consultarPropietarioPorNumeroIdentificacion(numeroIdentificacionPropietario: string) {
-    return this.http.doGet<Propietario[]>(`${environment.endpoint}${this.URL_PROPIETARIO}/${numeroIdentificacionPropietario}`, this.http.optsName('consultar propietario por numero identificacion'));
   }
 
 }

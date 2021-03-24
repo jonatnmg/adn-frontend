@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 import { AlertasService } from "@core-service/alertas.service";
 import { Iconos } from '@shared/util/iconos.enum';
 import { ERROR, EXITO } from "@shared/util/constantes";
-import { PropietarioService } from '../../shared/service/propietario.service';
+import { PropietarioService } from '@propietario/shared/service/propietario.service';
 
 const PROPIETARIO_CREADO_CORRECTAMENTE = "Propietario creado correctamente";
 const LONGITUD_MINIMA_TEXTO = 3;

@@ -9,7 +9,7 @@ import { Propietario } from '../model/propietario';
 export class PropietarioService {
 
   propietario: Propietario;
-  URL_PROPIETARIO = "/propietarios";
+  private URL_PROPIETARIO = "/propietarios";
 
   constructor(protected http: HttpService) { }
 
@@ -32,4 +32,7 @@ export class PropietarioService {
       this.http.optsName('Eliminar Propietarios'));
   }
 
+  public consultarPropietarioPorNumeroIdentificacion(numeroIdentificacionPropietario: string) {
+    return this.http.doGet<Propietario[]>(`${environment.endpoint}${this.URL_PROPIETARIO}/${numeroIdentificacionPropietario}`, this.http.optsName('listar propietario por numero identificacion'));
+  }
 }
