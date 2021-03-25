@@ -65,7 +65,7 @@ export class ConsultarPagosPendientesComponent implements OnInit {
 
   private construirFormularioPagosPendientes() {
     this.pagosPendientesForm = new FormGroup({
-      numeroPredial: new FormControl(222222, [Validators.required, Validators.minLength(LONGITUD_MINIMA_NUMERO_PREDIAL)])
+      numeroPredial: new FormControl(null, [Validators.required, Validators.minLength(LONGITUD_MINIMA_NUMERO_PREDIAL)])
     });
   }
 

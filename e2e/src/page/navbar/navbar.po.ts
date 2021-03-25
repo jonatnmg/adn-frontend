@@ -5,6 +5,7 @@ export class NavbarPage {
     linkTarifa = element(by.xpath('/html/body/app-root/app-navbar/nav/a[2]'));
     linkPropietario = element(by.xpath('/html/body/app-root/app-navbar/nav/a[3]'));
     linkInmueble = element(by.xpath('/html/body/app-root/app-navbar/nav/a[4]'));
+    linkPagos = element(by.xpath('/html/body/app-root/app-navbar/nav/a[5]'));
 
     async clickBotonTarifa() {
         await this.linkTarifa.click();
@@ -16,5 +17,9 @@ export class NavbarPage {
 
     async clickBotonInmueble() {
         await this.linkInmueble.click();
+    }
+
+    async clickBotonPagos() {
+        await this.linkPagos.click();
     }
 }

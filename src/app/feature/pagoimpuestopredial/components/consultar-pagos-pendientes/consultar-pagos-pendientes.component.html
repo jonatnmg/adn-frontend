@@ -18,7 +18,7 @@
             </div>
 
             <div class="mt-2 text-center">
-              <button type="submit" class="btn btn-primary mr-4" id="registrar">
+              <button type="submit" class="btn btn-primary mr-4" id="btnConsultar">
                 <i class="fa fa-search"></i> consultar
               </button>
 
@@ -65,7 +65,7 @@
             <td>{{ (pagosPendientes.tarifa.tarifa * pagosPendientes.inmueble.avaluoCatastral) / tarifaPorMil | currency:"CO":"$":"1.0" }}  </td>
             <td>{{pagosPendientes.anio}}</td>
             <td>
-              <a (click)="pagarImpuestoPredial(pagosPendientes)" class="pointer"> <i class="fa fa-money-bill"></i> </a>
+              <a id="pagoPendiente{{indice + 1}}" (click)="pagarImpuestoPredial(pagosPendientes)" class="pointer"> <i class="fa fa-money-bill"></i> </a>
             </td>
           </tr>
         </tbody>

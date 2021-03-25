@@ -5,6 +5,9 @@ export class PagarImpuestoPredialPage {
     private linkConsultar = element(by.id('linkConsultarPagoImpuestoPredial'));
 
     private botonRegistrar = element(by.id("registrar"));
+    private botonConsultarPagosPendientes = element(by.id("btnConsultar"));
+
+    private inputNumeroPredialBuscar = element(by.id('numeroPredial'));
 
     private inputFecha = element(by.id('fecha'));
     private inputValorPagado = element(by.id('valorPagado'));
@@ -23,6 +26,10 @@ export class PagarImpuestoPredialPage {
 
     async clickBotonListar() {
         await this.linkListar.click();
+    }
+
+    async ingresarInputNumeroPredialBuscar(numeroPredialBuscar) {
+        await this.inputNumeroPredialBuscar.sendKeys(numeroPredialBuscar);
     }
 
     async ingresarInputFecha(fecha) {
@@ -59,6 +66,10 @@ export class PagarImpuestoPredialPage {
 
     async clickBotonRegistrar() {
         await this.botonRegistrar.click();
+    }
+
+    async clickBotonConsultarPagosPendientes() {
+        await this.botonConsultarPagosPendientes.click();
     }
 
     async getTextoSwal(): Promise<string> {
