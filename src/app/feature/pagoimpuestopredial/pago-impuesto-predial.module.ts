@@ -5,11 +5,13 @@ import { PagoImpuestoPredialRoutingModule } from "@pagoimpuestopredial/pago-impu
 import { PagoImpuestoPredialService } from '@pagoimpuestopredial/shared/service/PagoImpuestoPredial.service';
 import { ListarPagosImpuestoPredialComponent } from '@pagoimpuestopredial/components/listar-pagos-impuesto-predial/listar-pagos-impuesto-predial.component';
 import { PagoImpuestoPredialComponent } from "@pagoimpuestopredial/components/pago-impuesto-predial/pago-impuesto-predial.component";
+import { ConsultarPagosPendientesComponent } from "@pagoimpuestopredial/components/consultar-pagos-pendientes/consultar-pagos-pendientes.component";
 
 @NgModule({
   declarations: [
     PagoImpuestoPredialComponent,
     ListarPagosImpuestoPredialComponent,
+    ConsultarPagosPendientesComponent
   ],
   imports: [
     PagoImpuestoPredialRoutingModule,
@@ -17,4 +19,6 @@ import { PagoImpuestoPredialComponent } from "@pagoimpuestopredial/components/pa
   ],
   providers: [PagoImpuestoPredialService]
 })
-export class PagoImpuestoPredialModule { }
+export class PagoImpuestoPredialModule {
+
+}

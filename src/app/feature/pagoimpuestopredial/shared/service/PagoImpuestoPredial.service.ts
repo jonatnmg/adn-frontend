@@ -3,6 +3,7 @@ import { HttpService } from '@core/services/http.service';
 import { environment } from 'src/environments/environment';
 import { PagoImpuestoPredial } from '../model/pagoimpuestopredial';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,6 +11,7 @@ export class PagoImpuestoPredialService {
 
   pagoImpuestoPredial: PagoImpuestoPredial;
   private URL_PAGO_IMPUESTO_PREDIAL = "/pagos";
+  private URL_PAGOS_PENDIENTES = "/pendientes";
 
   constructor(protected http: HttpService) { }
 
@@ -32,5 +34,8 @@ export class PagoImpuestoPredialService {
       this.http.optsName('Eliminar PagoImpuestoPredial'));
   }
 
+  public consultarPagosPendientesPorNumeroPredial(numeroPredial: string) {
+    return this.http.doGet<PagoImpuestoPredial[]>(`${environment.endpoint}${this.URL_PAGO_IMPUESTO_PREDIAL}${this.URL_PAGOS_PENDIENTES}/${numeroPredial}`, this.http.optsName('pagos pendientes'));
+  }
 
 }
