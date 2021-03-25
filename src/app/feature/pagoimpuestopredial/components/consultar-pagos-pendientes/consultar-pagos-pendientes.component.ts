@@ -10,7 +10,6 @@ import { Iconos } from '@shared/util/iconos.enum';
 const LONGITUD_MINIMA_NUMERO_PREDIAL = 3;
 const NO_SE_ENCONTRARON_PAGOS_PENDIENTES = "No se encontraron pagos pendientes";
 
-
 @Component({
   selector: 'app-consultar-pagos-pendientes',
   templateUrl: './consultar-pagos-pendientes.component.html',
