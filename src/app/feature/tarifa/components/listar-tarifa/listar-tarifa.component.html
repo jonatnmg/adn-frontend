@@ -16,7 +16,7 @@
         <tbody>
           <tr *ngFor="let item of listarTarifas | async; index as indice">
             <td>{{indice + 1}}</td>
-            <td>{{item.avaluoMinimo | currency:"CO":"$":"1.0"}}</td>
+            <td id="avaluoInicial">{{item.avaluoMinimo | currency:"CO":"$":"1.0"}}</td>
             <td>{{item.avaluoMaximo | currency:"CO":"$":"1.0"}}</td>
             <td>{{item.tarifa}}</td>
             <td>{{item.anio}}</td>
