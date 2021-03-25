@@ -26,8 +26,8 @@ describe('TARIFAS', () => {
 
         const AVALUO_MINIMO = 0;
         const AVALUO_MAXIMO = 128000000;
-        const ANIO = 2023;
-        const TARIFA = 5.3;
+        const ANIO = 2021;
+        const TARIFA = 5.2;
 
         tarifaPage.ingresarAvaluoMinimo(AVALUO_MINIMO);
         tarifaPage.ingresarInputAvaluoMaximo(AVALUO_MAXIMO);

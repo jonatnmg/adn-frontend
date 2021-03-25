@@ -25,11 +25,11 @@ describe('INMUEBLES', () => {
         inmueblePage.clickBotonCrear();
 
         const NUMERO_PREDIAL = 123599446;
-        const AVALUO_CATASTRAL = 45000000;
+        const AVALUO_CATASTRAL = 28000000;
         const DIRECCION = "Direccion test";
         const AREA_TOTAL = 120;
         const AREA_CONSTRUIDA = 110;
-        const NUMERO_IDENTIFICACION = "14522";
+        const NUMERO_IDENTIFICACION = "14238964";
 
         inmueblePage.ingresarInputNumeroIdentificacionPropietario(NUMERO_IDENTIFICACION);
         inmueblePage.ingresarInputNumeroPredial(NUMERO_PREDIAL);

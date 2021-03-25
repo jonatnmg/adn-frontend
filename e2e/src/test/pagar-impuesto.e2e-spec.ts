@@ -10,9 +10,9 @@ describe('Impuesto predial', () => {
     let pagarImpuestoPredialPage: PagarImpuestoPredialPage;
 
     const PAGO_REALIZADO_CORRECTAMENTE = "Pago realizado correctamente";
-    const NUMERO_PREDIAL_BUSQUEDA = 222222;
+    const NUMERO_PREDIAL_BUSQUEDA = 123599446;
     const ID_PAGO_PENDIENTE = "pagoPendiente1";
-    const VALOR_A_PAGAR = 162400;
+    const VALOR_A_PAGAR = 145600;
     const FECHA_PAGO = "05/06/2021";
 
     beforeEach(() => {
