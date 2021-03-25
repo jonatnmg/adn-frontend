@@ -11,7 +11,7 @@ export class TarifaPage {
     private inputAnio = element(by.id('anio'));
     private swal = element(by.className('swal2-html-container'));
 
-    async clickBotonCrearProducto() {
+    async clickBotonCrearTarifa() {
         await this.linkCrearTarifa.click();
     }
 

@@ -1,39 +1,47 @@
-import { browser, by, element, logging } from 'protractor';
-import { NavbarPage } from '../page/navbar/navbar.po';
+
 import { AppPage } from '../app.po';
-import { ProductoPage } from '../page/producto/producto.po';
+import { browser } from 'protractor';
+import { NavbarPage } from '../page/navbar/navbar.po';
 import { TarifaPage } from '../page/tarifa/tarifa.po';
 
-describe('Listar tarifas', () => {
+describe('TARIFAS', () => {
     let page: AppPage;
     let navBar: NavbarPage;
-    let tarifa: TarifaPage;
-    const valorInicial = "$0";
+    let tarifaPage: TarifaPage;
+  
+    const TARIFA_CREADA_CORRECTAMENTE = "Tarifa creada correctamente";
 
     beforeEach(() => {
         page = new AppPage();
         navBar = new NavbarPage();
-        tarifa = new TarifaPage();
+        tarifaPage = new TarifaPage();
     });
 
-    /*it('Deberia crear producto', () => {
-        const ID_PRODUCTO = '001';
-        const DESCRIPCION_PRODUCTO = 'Producto de pruebas';
 
-        page.navigateTo();
-        navBar.clickBotonProductos();
-        producto.clickBotonCrearProductos();
-        producto.ingresarId(ID_PRODUCTO);
-        producto.ingresarDescripcion(DESCRIPCION_PRODUCTO);
-
-        // Adicionamos las validaciones despues de la creación
-        // expect(<>).toEqual(<>);
-    });*/
-
-    it('Deberia listar tarifas', () => {
+    it('Crear tarifa', () => {
         page.navigateTo();
         navBar.clickBotonTarifa();
+        browser.sleep(2000);
+        tarifaPage.clickBotonCrearTarifa();
 
-        expect(element(by.css('app-root #avaluoInicial'))).toEqual(valorInicial);
+        const AVALUO_MINIMO = 0;
+        const AVALUO_MAXIMO = 128000000;
+        const ANIO = 2023;
+        const TARIFA = 5.3;
+
+        tarifaPage.ingresarAvaluoMinimo(AVALUO_MINIMO);
+        tarifaPage.ingresarInputAvaluoMaximo(AVALUO_MAXIMO);
+        tarifaPage.ingresarInputAnio(ANIO);
+        tarifaPage.ingresarInputTarifa(TARIFA);
+        browser.sleep(500);
+
+        tarifaPage.clickBotonRegistrar();
+
+        //assert
+        const alerta = tarifaPage.getTextoSwal();
+
+        expect(alerta).toEqual(TARIFA_CREADA_CORRECTAMENTE);
+        browser.sleep(300);
+
     });
 });
